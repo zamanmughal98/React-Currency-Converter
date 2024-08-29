@@ -1,0 +1,139 @@
+:root {
+  --backgroundColor: #073b4c;
+  --borderClors: #118ab2;
+  --inputFieldsFont: cursive;
+  --labelFont: monospace;
+}
+
+.CurrencyConverter_section {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2% 4%;
+  border-radius: 20px;
+  background: var(--backgroundColor);
+}
+
+.subContaierOfCurrency {
+  margin-top: 12px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  border-radius: 20px;
+  background: var(--borderClors);
+  padding: 2% 2%;
+}
+
+.justifyContentSpaceAround {
+  justify-content: space-around;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--backgroundColor);
+  border-radius: 20px;
+  width: 35%;
+  padding: 2% 2%;
+}
+
+.inputLabel {
+  color: white;
+  font-size: large;
+  font-family: var(--labelFont);
+  font-weight: 700;
+}
+
+.inputField {
+  background: white;
+  color: var(--backgroundColor);
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-family: var(--inputFieldsFont);
+  font-size: medium;
+  font-weight: 900;
+}
+
+.Swapbutton {
+  margin-top: 12px;
+  background-color: var(--borderClors);
+  color: var(--backgroundColor);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: monospace;
+  cursor: pointer;
+  transition: background-color 1s, transform 1s;
+}
+
+.Swapbutton:hover {
+  background-color: white;
+  color: var(--backgroundColor);
+  outline: 0;
+}
+
+.Swapbutton:active {
+  background-color: var(--backgroundColor);
+  color: white;
+  transform: scale(0.98);
+  outline: 2px solid white;
+}
+
+.Swapbutton:disabled {
+  background-color: var(--backgroundColor);
+  color: white;
+  cursor: not-allowed;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.6;
+  outline: none;
+}
+
+.Swapbutton:disabled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  pointer-events: none;
+}
+
+.convertbutton {
+  width: 70%;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #118ab2;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: monospace;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.convertbutton:hover {
+  background-color: #118ab2;
+  color: #fff;
+  border-color: transparent;
+}
+
+.convertbutton:active {
+  background-color: #073b4c;
+  color: #fff;
+  transform: scale(0.98);
+  outline: 2px solid white;
+}
